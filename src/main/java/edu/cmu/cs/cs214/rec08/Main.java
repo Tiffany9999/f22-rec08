@@ -89,6 +89,7 @@ public class Main {
 
         Instant start = Instant.now();
 
+        // gets a response
         CompletableFuture<HttpResponse<String>> responseFuture = client.sendAsync(request, HttpResponse.BodyHandlers.ofString());
         // observe when this statement is printed out to the console. 
         responseFuture.thenRun(() -> System.out.println("do other things after finished..."));
@@ -130,11 +131,11 @@ public class Main {
 
     public static void main(String[] args) throws IOException, InterruptedException, ExecutionException {
         // Task 1
-        runWebAPIRequest();
+        //runWebAPIRequest();
         // Task 2
-    //    runMultipleSynchronous();
-    //    runSingleAsync();
-    //    runMultipleAsynchronous();
+       runMultipleSynchronous();
+       runSingleAsync();
+       runMultipleAsynchronous();
         System.exit(0);
     }
 }
